@@ -5,8 +5,8 @@ export default {
   ],
   theme: {
     screens :{
-       'sm' : "640px" ,
-        'md' : "768px" ,
+       'sm' : "480px" ,
+        'md' : "800px" ,
        'lg ':"1024px"
     } ,
     colors :{
