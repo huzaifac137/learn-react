@@ -9,6 +9,7 @@ import UseEffect from "./pages/UseEffect";
 import UseRef from "./pages/UseRef";
 import Handlers from "./pages/Handlers";
 import Forms from "./pages/Forms";
+import Routing from "./pages/Routing";
 
 
 function App() {
@@ -45,6 +46,10 @@ function App() {
     {
       path :"/forms" ,
       element : <Forms/>
+    } , 
+    {
+      path :"/routing" ,
+      element : <Routing/>
     }
   ])
 
