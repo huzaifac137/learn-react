@@ -4,6 +4,15 @@ import Step from '../components/Step';
 
 
 function Starter({}){
+
+  const data =[
+    "  //learn-react is just folder name which will be created by this command \n \n  => npm create vite@latest learn-react " ,
+   " //Go through options to select React and then Select Javascript , after that \n \n  => cd learn-react  " ,
+   " => npm install  " ,
+   " => npm run dev"
+
+  ];
+
     return (
         <>
           <div className="flex flex-col w-auto mt-10  p-5 justify-start items-center ">
@@ -24,19 +33,22 @@ function Starter({}){
       <Step
         headingTitle={"Step 3"}
         descriptionContent={
-          "Open VS Code , then Select Terminal -> New Terminal , the terminal screen looks something like this "
+          "Open VS Code , then Select Terminal -> New Terminal , Input the following commands one-by-one in terminal: "
         }
-       
+        descriptionContentEnd={"\n npm run dev will start your app , it will be ready at localhost:5173 , you can go there and check the starting page"} 
       >
-        <img src={step3IMG} className= " w-11/12 h-full  md:w-4/5 md:h-4/5 mt-10"/>
+
+
+{ data.map((item)=>  <section className='border border-secondary bg-black rounded-lg w-full p-2 m-2'>
+ <p className='ml-5 whitespace-pre-line text-tertiary text-sm'>{item}</p>
+ </section>  )}
+
         </Step>
-        <Step headingTitle={"Step 4"} descriptionContent={`Input the following commands one-by-one in terminal (commands presented by arrows just for easy reading) `} 
-        descriptionContentMiddle={" \n //learn-react is just folder name which will be created by this command \n  => npm create vite@latest learn-react \n \n //Go through options to select React and then Select Javascript , after that \n \n  => cd learn-react \n \n => npm install \n \n => npm run dev  "}
-        descriptionContentEnd={"\n npm run dev will start your app , it will be ready at localhost:5173 , you can go there and check the starting page"} /> 
+       
 
         <a className='cursor-pointer align-center flex flex-col items-center mb-4' href='/basics'>Next : Basics</a>
 
-
+      
         </>    )
 };
 export default Starter;
