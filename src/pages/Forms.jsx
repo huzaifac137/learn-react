@@ -154,7 +154,7 @@ export default myForm`}>
         </>)}
 
 </Step>
- <a className='cursor-pointer align-center flex flex-col items-center mb-4' href=''> Next : Routing (Multiple Pages) </a>
+ <a className='cursor-pointer align-center flex flex-col items-center mb-4' href='/routing'> Next : Routing (Multiple Pages) </a>
 </>
     )
 };
