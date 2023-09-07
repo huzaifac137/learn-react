@@ -23,7 +23,7 @@ function Forms(){
             }
             
             export default App;` ,
-            end : `In this example, the name state variable is tied to the value of the input field through "value" property, and any change in the input field updates the state variable via the handleInputChange function assigned to "onChange" property which exposes "event" to conatining function (handleInputChange) .
+            end : `In this example, the name state variable is tied to the value of the input field through "value" property, and any change in the input field updates the state variable via the handleInputChange function assigned to "onChange" property which exposes "event" to containing function (handleInputChange) .
             Through this event object we can access multiple properties like actual value of input by event.target.value`
         } , 
         {

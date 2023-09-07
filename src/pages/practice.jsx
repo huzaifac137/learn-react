@@ -1,20 +1,10 @@
 import React from 'react';
+import { NavLink} from 'react-router-dom';
 
 function Practice(props) {
-    const handleForm=()=>{
-        // action to perfrom on Click of button
-    };
-
-    // can also write handler like this
-    // function handleForm(){
-    //     // action to perfrom on Click of button
-    // };
-
 
     return (
-        <div>
-             <button onClick={handleForm} >Submit form</button>
-        </div>
+        <NavLink to="/basics">Go to Basics</NavLink>
     );
 }
 

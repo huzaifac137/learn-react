@@ -1,9 +1,10 @@
 import React from 'react';
 import Step from '../components/Step';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, useNavigate } from 'react-router-dom';
 
 function Routing(props) {
 
+  const navigate =  useNavigate();
   
     const data = [{
         heading : ` \n To get started with routing in React, you need to install a routing library like React Router. You can do this using npm or yarn in your terminal:` ,
@@ -72,7 +73,24 @@ function Routing(props) {
   
   export default App;
   `
-}];
+} ];
+
+const data2=[
+  {
+    heading : `You can also use NavLink provided the library to navigate , it is just anchor tag behind the scenes :` ,
+    desc : `import React from 'react';
+    import { NavLink} from 'react-router-dom';
+    
+    function Practice(props) {
+    
+        return (
+            <NavLink to="/basics">Go to Basics</NavLink>
+        );
+    }
+    
+    export default Practice;`
+  }
+]
 
     return (
         <>
@@ -91,6 +109,43 @@ function Routing(props) {
     
     
         </Step>
+        <Step headingTitle={`Navigation`} descriptionContent={`To progamatically navigate from one route to another , react-router-dom provides hook called useNavigate() , \n Here is a complete example : `} 
+        descriptionContentMiddle={`import React from 'react';
+        import { useNavigate } from 'react-router-dom';
+        
+        function Practice(props) {
+        
+            const navigate = useNavigate();
+        
+            const handleNavigation=()=>{
+        
+                // pass the path of route to destination route
+                  navigate("/basics");
+            };
+        
+        
+            return (
+                <div>
+                     <button onClick={handleNavigation} >Navigate </button>
+                </div>
+            );
+        }
+        
+        export default Practice;`}>
+
+{data2.map((item)=> <>
+            <p className='ml-5 whitespace-pre-line text-md '>{ item.heading}</p> 
+          
+          <section className='border border-secondary bg-black rounded-lg w-full p-2 m-2'>
+            <p className='ml-5 whitespace-pre-line text-tertiary text-sm'>{item.desc}</p>
+            </section>  
+            <p className='ml-5 whitespace-pre-line text-tertiary text-sm'>{item.end}</p>
+
+        </>)}
+
+        </Step>
+
+
         </>
     );
 }
